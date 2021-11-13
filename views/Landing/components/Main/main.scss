@@ -1,0 +1,146 @@
+.landing-main{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    z-index: 2;
+    align-content: center;
+
+    .landing-sub{
+        margin-right: 60px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .landing-main-title-wrap{
+            margin-left: 30px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            border-style: none;
+
+            p{
+                font-family: Montserrat Bold;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 60px;
+                color: #333333;
+            }
+        }
+
+        .landing-main-help-text-wrap{
+            margin-left: 30px;
+            margin-bottom: 50px;
+
+            p{
+                font-family: Montserrat Medium;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                color: #666666;
+            }
+        }
+
+        .landing-main-btns-wrap{
+            display: flex;
+            flex-direction: row;
+
+            a{
+                text-decoration: none;
+            }
+
+            .landing-main-btn-enter-app{
+                margin: 0 0px 45px;
+                padding: 14px 30px 50px;
+                min-width: 250px;
+                    background-image: url("../../../../assets/icons/enter-app.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                cursor: pointer;
+                text-align: center;
+
+                p{
+                    font-family: Montserrat Semibold;
+                    font-style: normal;
+                    font-weight: 600;
+                    margin-top: 10px;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #FFFFFF;
+                }
+            }
+
+            .landing-main-btn-documentation{
+                margin: 0 0px 45px;
+                padding: 14px 30px 50px;
+                min-width: 250px;
+                    background-image: url("../../../../assets/icons/documentation.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                cursor: pointer;
+                text-align: center;
+
+                p{
+                    font-family: Montserrat Semibold;
+                    font-style: normal;
+                    font-weight: 600;
+                    margin-top: 10px;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .landing-sub-img{
+        margin-left: 10px;
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        img{
+            width: 477px;
+            height: 346px;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .landing-main{
+        justify-content: normal !important;
+
+        .landing-main-title-wrap{
+            margin-left: 0px;
+            p{
+                font-size: 40px;
+            }
+        }   
+        
+        .landing-main-help-text-wrap{
+            margin-left: 0px;
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+
+    .landing-sub-img{
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 465px) {
+    .landing-main{
+        .landing-main-btns-wrap{
+            flex-wrap: wrap !important;
+            flex-direction: column;
+
+            .landing-main-btn-enter-app {
+                margin: 0 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,309 @@
+.bond-view {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  z-index: 69;
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .MuiBackdrop-root {
+      background: rgba(100, 100, 100, 0.05) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .MuiBackdrop-root {
+      background: rgba(100, 100, 100, 0.05);
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .bond-card {
+    max-width: 803px;
+    min-height: 605px;
+
+        background:url("../../assets/icons/hidden-pig.png") #FFFCED  right bottom no-repeat;
+        background-size: 275px;
+        border: 5px solid #FFD602;
+        box-shadow: 0px 9px 15px 0px rgba(162, 80, 0, 0.3);
+        border-radius: 15px;
+
+    backdrop-filter: blur(100px);
+    padding: 20px;
+    width: 100%;
+  }
+
+  .bond-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .bond-header-logo {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+
+      .ohm-logo-bg {
+        height: 40px !important;
+        width: 40px !important;
+        padding: 8px !important;
+        margin-left: 0;
+      }
+
+      .bond-header-name {
+        text-align: center;
+        margin-left: 10px;
+
+        font-family: Montserrat SemiBold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        color: #333333;
+      }
+    }
+  }
+
+  .bond-data {
+    margin: 10px 300px 0px 0px;
+  }
+
+  .bond-price-data {
+    text-align: center;
+
+    .bond-price-data-title {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #999999;
+    }
+
+    .bond-price-data-value {
+      font-family: Montserrat Bold;
+      font-weight: 800;
+      font-size: 23px;
+      color: #333333;
+    }
+  }
+
+  .bond-price-data-row {
+      margin: 30px 0;
+      align-items: center;
+
+    .bond-price-data-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    h4 {
+      margin-bottom: 0;
+    }
+
+    h3.price {
+      font-weight: 600 !important;
+    }
+  }
+
+  .ohm-input {
+    min-width: 50%;
+    max-width: 408px;
+    margin: 5px;
+
+    .avax-checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      input {
+        height: 15px;
+        width: 15px;
+      }
+
+      p {
+        font-family: Montserrat SemiBold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-left: 5px;
+      }
+    }
+  }
+
+
+  .transaction-button {
+    min-width: 185px !important;
+    max-width: 408px;
+    width: 100%;
+    margin: 5px !important;
+  }
+
+
+  .bond-one-table {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .bond-one-table-btn{
+      margin: 0 20px;
+      cursor: pointer;
+      transition: all .4s ease;
+
+      p{
+        font-family: Montserrat SemiBold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        color: #666666;
+      }
+    }
+
+    .bond-one-table-btn.active{
+      border-bottom: 1px solid #FFFFFF;
+
+      p{
+        color: #333333;
+      }
+    }
+  }
+
+  .bond-input-wrap{
+    min-width: 50%;
+    max-width: 408px;
+  }
+
+  .bond-input {
+          background-image: url("../../assets/icons/amount.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          backdrop-filter: blur(100px);
+    outline: none;
+    margin-bottom: 20px;
+
+    .MuiOutlinedInput-input {
+      font-family: Montserrat Medium;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      color: #999999;
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .stake-input-btn {
+      cursor: pointer;
+
+      p {
+        font-family: Montserrat SemiBold;
+        font-weight: 500;
+        font-size: 15px;
+        color: #333333;
+      }
+    }
+  }
+
+  .bond-approve-btn {
+          background-image: url("../../assets/icons/approve.png");
+          background-size: 50% 120%;
+          background-repeat: no-repeat;
+          background-position: center;
+    height: 58px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-family: Montserrat SemiBold;
+      font-weight: 600;
+      font-size: 18px;
+      color: #FFFFFF;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  .bond-approve-btn-long {
+  background-size: 100% 120%;
+  background-size: 100% 100%;
+      padding: 0px 0px 10 px 0px;
+      height: 80px;
+  }
+
+  .help-text {
+    margin-top: 20px;
+
+    .help-text-desc {
+      font-family: Montserrat Light;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .bond-balance-title {
+    font-family: Montserrat Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #666666;
+  }
+}
+
+.mobile #bond-view {
+  .ohm-card {
+    .card-content {
+      justify-content: space-evenly !important;
+
+      .bond-toggle-row {
+        justify-content: space-evenly !important;
+      }
+
+      .input-row {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .input-group.ohm-input-group {
+          margin: 10px !important;
+          width: 75%;
+          height: 50px;
+        }
+
+        div.stake-button {
+          width: 75%;
+          margin-left: 0;
+          margin-top: 15px;
+          height: 50px;
+          font-size: 1.3em !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .bond-data {
+    margin: 10px 100px 0px 0px !important;
+  }
+
+  .bond-price-data-title {
+    font-size: 17px !important;
+  }
+
+  .bond-price-data-value {
+    font-size: 19px !important;
+  }
+}

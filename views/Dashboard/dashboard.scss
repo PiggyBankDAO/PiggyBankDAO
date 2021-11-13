@@ -1,0 +1,93 @@
+.dashboard-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  width: 89%;
+  max-width: 833px;
+  margin: auto;
+
+  .dashboard-infos-wrap{
+    .dashboard-card{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      position: relative;
+      z-index: 2;
+      
+      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+          background-image: url("../../assets/icons/box.png");
+          background-size: 100% 100%;;
+          background-repeat: no-repeat;
+      }
+    
+      /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+      @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        background: #181B1C;
+      }
+
+      border-radius: 10px;
+      padding: 25px 0 55px;
+
+      .card-title {
+        font-size: 15px;
+        font-family: Montserrat;
+        font-weight: 500;
+        color: #666666;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .MuiIconButton-root {
+            padding: 0;
+        }
+      }
+  
+      .card-value {
+        font-size: 23px;
+        font-family: Montserrat SemiBold;
+        font-weight: 800;
+        color: #333333;
+      }
+    }
+  }
+}
+
+.MuiPopover-paper {
+    border-radius: 15px !important;
+
+    .dashboard-card-popup {
+        width: 365px;
+        height: 161px;
+        background:url("../../assets/icons/hidden-pig.png") #FFFCED  center bottom no-repeat;
+        background-size: 175px;
+        border: 5px solid #FFD602;
+        box-shadow: 0px 5px 15px 0px rgba(162, 80, 0, 0.3);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-family: Montserrat;
+            font-size: 15px;
+            font-weight: bold;
+            color: #333333;
+            padding: 10px 30px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 417px) {
+    .dashboard-card{
+        padding: 20px 0 50px !important;
+    }
+}

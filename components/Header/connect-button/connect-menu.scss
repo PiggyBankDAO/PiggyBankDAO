@@ -1,0 +1,35 @@
+.connect-menu-root{
+    .connect-button{
+        padding: 14px 30px 26px 30px;
+        background-image: url("../../../assets/icons/enter-app.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+
+        .connect-button-progress{
+          margin-left: 10px;
+          margin-top: 4px;
+        }
+
+        p{
+          font-family: Montserrat SemiBold;
+          font-weight: 500;
+          font-size: 14px;
+          color: #F8FFFB;
+          min-width:100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .connect-button {
+        padding: 14px 25px 26px 30px !important;
+    }
+}
