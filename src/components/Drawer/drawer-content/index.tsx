@@ -15,6 +15,8 @@ import { Skeleton } from "@material-ui/lab";
 import "./drawer-content.scss";
 import DocsIcon from "../../../assets/icons/stake.svg";
 import classnames from "classnames";
+import { useSelector } from "react-redux";
+import { IReduxState } from "src/store/slices/state.interface";
 
 function NavContent() {
     const [isActive] = useState();
